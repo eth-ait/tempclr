@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+ <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/apidoc.css?">
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<style>
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+icon {height: 1em;}
+</style>
+
+
+
+**TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning**
+
+Andrea Ziani<sup>1,&#9827;</sup>, [Zicong Fan](https://zc-alexfan.github.io)<sup>1,2,&#9827;</sup>, [Muhammed Kocabas](https://ps.is.tuebingen.mpg.de/person/mkocabas)<sup>1,2</sup>, [Sammy Christen](https://ait.ethz.ch/people/sammyc/)<sup>1</sup>, [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/)<sup>1</sup><br>
+<sup>1</sup>ETH Zürich, <sup>2</sup>Max Planck Institute for Intelligent Systems, Tübingen,
+&#9827; Equal contribution<br>
+*In Proceedings of the International Conference on 3D Vision (3DV), 2022, Prague, Czechia.*<br>
+
+<a class="github-button" href="https://github.com/eth-ait/tempclr" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star eth-ait/tempclr on GitHub">Code</a>
+<br>
+<a target="_blank" text-align='center' href='https://arxiv.org/abs/'><img src="./assets/arxiv.svg" height="22px"></a>
+
+## Abstract
+
+We introduce TempCLR, a new time-coherent contrastive learning approach for the structured regression task of 3D hand reconstruction. Unlike previous time-contrastive methods for hand pose estimation, our framework considers temporal consistency in its augmentation scheme, and accounts for the differences of hand poses along the temporal direction. Our data-driven method leverages unlabelled videos and a standard CNN, without relying on synthetic data, pseudo-labels, or specialized architectures. Our approach improves the performance of fully-supervised hand reconstruction methods by 15.9% and 7.6% in PA-V2V on the HO-3D and FreiHAND datasets respectively, thus establishing new state-of-the-art performance. Finally, we demonstrate that our approach produces smoother hand reconstructions through time, and is more robust to heavy occlusions compared to the previous state-of-the-art which we show quantitatively and qualitatively.
+
+
+## Citing Us
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~text
+@inProceedings{ziani2022tempclr,
+  title={TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning},
+  author={Ziani, Andrea and Fan, Zicong and Kocabas, Muhammed and Christen, Sammy and Hilliges, Otmar},
+  booktitle={International Conference on 3D Vision (3DV)},
+  year={2022}
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
+
+<script type="text/javascript">
+window.markdeepOptions.tocStyle='none'
+</script>
+
+<script type="text/javascript">
+// Reload page when loaded: github icon needs refreshed
+window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+
+</script>
+
