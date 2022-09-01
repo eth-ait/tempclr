@@ -34,6 +34,46 @@ Andrea Ziani<sup>1,&#9827;</sup>, [Zicong Fan](https://zc-alexfan.github.io)<sup
 <br>
 <a target="_blank" text-align='center' href='https://arxiv.org/abs/'><img src="./assets/arxiv.svg" height="22px"></a>
 
+## Goal
+
+![Reconstructing 3D hand from a single RGB image](./assets/task.png width=80%)
+
+## Key Insight
+
+- Large amount of unlabelled monocular RGB video data in the wild
+- Limited accurate 3D annotation (often in-the-lab and not diverse)
+- Use contrastive learning to enforce similar hand poses to have similar embeddings.
+
+![](./assets/tsne.png width=90%)
+
+## In-the-wild results (no 3D supervision)
+
+TempCLR:
+
+![](./assets/tempclr/itw1.gif width=30%)
+![](./assets/tempclr/itw2.gif width=30%)
+
+
+Without TempCLR:
+
+![](./assets/expose/itw1.gif width=30%)
+![](./assets/expose/itw2.gif width=30%)
+
+## In-the-lab results (no 3D supervision)
+
+TempCLR:
+
+![](./assets/tempclr/hanco1.gif width=30%)
+![](./assets/tempclr/hanco2.gif width=30%)
+
+
+Without TempCLR:
+
+![](./assets/expose/hanco1.gif width=30%)
+![](./assets/expose/hanco2.gif width=30%)
+
+
+
 ## Abstract
 
 We introduce TempCLR, a new time-coherent contrastive learning approach for the structured regression task of 3D hand reconstruction. Unlike previous time-contrastive methods for hand pose estimation, our framework considers temporal consistency in its augmentation scheme, and accounts for the differences of hand poses along the temporal direction. Our data-driven method leverages unlabelled videos and a standard CNN, without relying on synthetic data, pseudo-labels, or specialized architectures. Our approach improves the performance of fully-supervised hand reconstruction methods by 15.9% and 7.6% in PA-V2V on the HO-3D and FreiHAND datasets respectively, thus establishing new state-of-the-art performance. Finally, we demonstrate that our approach produces smoother hand reconstructions through time, and is more robust to heavy occlusions compared to the previous state-of-the-art which we show quantitatively and qualitatively.
