@@ -1,0 +1,84 @@
+checkpoint_folder: 'checkpoints'
+output_folder: '$INFERENCE/FreiHAND_model'
+summary_folder: 'summary'
+
+# Set this two flags True if you want to save re-projection images.
+save_reproj_images: False
+create_image_summaries: False
+
+# Flag for using the GPU
+use_cuda: True
+float_dtype: "float32"
+is_training: False
+part_key: 'hand'
+
+datasets:
+  hand:
+    batch_size: 16
+    splits:
+      test: [ 'freihand' ]
+    num_workers:
+      test: 0
+
+    transforms:
+      max_size: 800
+
+    freihand:
+      data_folder: '$DATASETS/freihand/'
+      metrics: [ 'mpjpe', 'v2v' ]
+      file_format: 'json'
+      return_vertices: True
+
+    ho3d:
+      data_folder: '$DATASETS/HO3D_v2/'
+      metrics: [ 'mpjpe' ]
+      file_format: 'pkl'
+
+
+network:
+  hand_randomize_global_rot: False
+  hand_global_rot_min: -90.0
+  hand_global_rot_max: 90.0
+  hand_global_rot_noise_prob: 0.3
+
+  hand_add_shape_noise: False
+  hand_shape_std: 1.0
+  hand_shape_prob: 0.3
+
+  add_hand_pose_noise: False
+  hand_pose_std: 1.0
+  num_hand_components: 3
+  hand_noise_prob: 0.3
+
+  type: 'MANORegressor'
+  hand:
+    type: 'iterative-mlp'
+    num_stages: 3
+    pose_last_stage: True
+    backbone:
+      type: 'resnet50'
+      pretrained: True
+    mlp:
+      layers: [ 1024, 1024 ]
+      dropout: 0.0
+      activation:
+        type: 'relu'
+      normalization:
+        type: 'none'
+    camera:
+      weak_persp:
+        regress_translation: True
+        regress_scale: True
+        mean_scale: 0.9
+hand_model:
+  type: 'mano'
+  model_folder: '$MODELS/'
+
+  mano:
+    betas:
+      num: 10
+    extra_joint_path: 'mano_right_extra_joints.yaml'
+    wrist_pose:
+      type: 'cont_rot_repr'
+    hand_pose:
+      type: 'cont_rot_repr'

@@ -1,0 +1,30 @@
+right_index:
+  bc:
+  - 0.0
+  - 1.0
+  - 0.0
+  face: 411
+right_middle:
+  bc:
+  - 0.0
+  - 0.0
+  - 1.0
+  face: 674
+right_pinky:
+  bc:
+  - 0.0
+  - 1.0
+  - 0.0
+  face: 1141
+right_ring:
+  bc:
+  - 0.0
+  - 0.0
+  - 1.0
+  face: 910
+right_thumb:
+  bc:
+  - 1.0
+  - 0.0
+  - 0.0
+  face: 1277
