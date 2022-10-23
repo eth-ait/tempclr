@@ -12,6 +12,9 @@
 > *Equal Contribution.
 > International Conference on 3D Vision (3DV), 2022
 
+> Our training code is being prepared for public release. However, if you need the code urgently, we can provide a pre-release version if you email to `zicong.fan@inf.ethz.ch`.
+
+
 ## Teaser
 
 TempCLR:
