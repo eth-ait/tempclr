@@ -12,20 +12,14 @@
 > *Equal Contribution.
 > International Conference on 3D Vision (3DV), 2022
 
+
+<p align="center">
+    <img src="assets/tempclr.gif" alt="Image" height="200" />
+</p>
+
+
 > Our training code is being prepared for public release. However, if you need the code urgently, we can provide a pre-release version if you email to `zicong.fan@inf.ethz.ch`.
 
-
-## Teaser
-
-TempCLR:
-<p align="center">
-    <img src="assets/tempclr_hanco2.gif" alt="Image" height="200" />
-</p>
-
-No TempCLR:
-<p align="center">
-    <img src="assets/no_tempclr_hanco2.gif" alt="Image" height="200" />
-</p>
 
 ## Updates
 
@@ -153,6 +147,16 @@ create_image_summaries: True
 ```
 
 The images will be saved in the pre-trained model directory under a new directory named  `summary` .
+
+
+# Projects that might interest you
+
+**Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-Pixel Part Segmentation**
+> Zicong Fan, Adrian Spurr, Muhammed Kocabas, Siyu Tang, Michael J. Black, Otmar Hilliges. 3DV2021. [[Project](https://zc-alexfan.github.io/digit)] 
+
+<p align="center">
+    <img src="assets/digit.gif" alt="Image" height="200" />
+</p>
 
 # Acknowledgements
 [Muhammed Kocabas](https://ps.is.mpg.de/employees/mkocabas) is supported by the Max Planck ETH Center for Learning Systems. 
