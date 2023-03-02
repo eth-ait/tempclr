@@ -1,116 +1,262 @@
 <!DOCTYPE html>
- <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/apidoc.css?">
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+            content="ARCTIC: A Dataset for Dexterous Bimanual Hand-Object Manipulation">
+        <meta name="keywords" content="ARCTIC, Hand-object interaction">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            
+            gtag('js', new Date());
+            
+            gtag('config', 'G-PYVRSFMDRL');
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/bulma.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <link rel="icon" href="./assets/pointing-svgrepo-com.svg">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                    <a class="navbar-item" href="https://zc-alexfan.github.io">
+                    <span class="icon">
+                    <i class="fas fa-home"></i>
+                    </span>
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                        More Research
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="https://arctic.is.tue.mpg.de">
+                            ARCTIC
+                            </a>
+                            <a class="navbar-item" href="https://zc-alexfan.github.io/digit">
+                            DIGIT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning</h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                Andrea Ziani<sup>1</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://zc-alexfan.github.io/">Zicong Fan</a><sup>1,2</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ps.is.tuebingen.mpg.de/person/mkocabas">Muhammed Kocabas</a><sup>1,2</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ait.ethz.ch/people/sammyc/">Sammy Christen</a><sup>1</sup>,</span>
+                                <span class="author-block">
+                                <a href="https://ait.ethz.ch/people/hilliges/">Otmar Hilliges</a><sup>1</sup>
+                                </span>
+                            </div>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><sup>1</sup>ETH Z&uuml;rich, Switzerland,</span>
+                                <span class="author-block"><sup>2</sup>Max Planck Institute for Intelligent Systems, T&uuml;bingen, Germany</span>
+                            </div>
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- PDF Link. -->
+                                    <span class="link-block">
+                                    <a href="http://arxiv.org/abs/2209.00489"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                    </a>
+                                    </span>
+                                    <!-- Video Link. -->
+                                    <span class="link-block">
+                                    <a href="https://www.youtube.com/watch?v=VSsKx8SnFio&ab_channel=AITETH"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fab fa-youtube"></i>
+                                    </span>
+                                    <span>Video</span>
+                                    </a>
+                                    </span>
+                                    <!-- Code Link. -->
+                                    <span class="link-block">
+                                    <a href="https://github.com/eth-ait/tempclr"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                    </a>
+                                    </span>                                 
+                                    <!-- Email Link. -->
+                                    <span class="link-block">
+                                    <a href="mailto:zicong.fan@inf.ethz.ch"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                    <i class="far fa-envelope"></i>
+                                    </span>
+                                    <span>Contact</span>
+                                    </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body">
+                    <img src="./assets/tsne.png" height="150%" />
+                    <h2 class="subtitle has-text-centered">
+                        Accurate in-the-wild 3D hand annotation is limited,
+                        <span class="dnerf">TempCLR</span> leverages a large amount of unlabelled monocular RGB video data in the wild via contrastive learning to enforce similar hand poses to have similar embeddings.
+                    </h2>
+                </div>
+            </div>
+        </section>
+        
 
-<style>
-html, body {
-    height: 100%;
-}
 
-html {
-    display: table;
-    margin: auto;
-}
+<section class="section">
+  <div class="container is-max-desktop">
 
-body {
-    display: table-cell;
-    vertical-align: middle;
-}
+    <div class="columns is-centered">
 
-icon {height: 1em;}
-</style>
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">TempCLR</h2>
+          <img src="./assets/tempclr/itw1.gif">
+          <img src="./assets/tempclr/itw2.gif">
+          <img src="./assets/tempclr/hanco1.gif">
+          <img src="./assets/tempclr/hanco2.gif">
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
 
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">No TempCLR</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./assets/expose/itw1.gif">
+            <img src="./assets/expose/itw2.gif">
+           <img src="./assets/expose/hanco1.gif">
+          <img src="./assets/expose/hanco2.gif">
+          </div>
 
-
-**TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning**
-
-Andrea Ziani<sup>1,&#9827;</sup>, [Zicong Fan](https://zc-alexfan.github.io)<sup>1,2,&#9827;</sup>, [Muhammed Kocabas](https://ps.is.tuebingen.mpg.de/person/mkocabas)<sup>1,2</sup>, [Sammy Christen](https://ait.ethz.ch/people/sammyc/)<sup>1</sup>, [Otmar Hilliges](https://ait.ethz.ch/people/hilliges/)<sup>1</sup><br>
-<sup>1</sup>ETH Zürich, <sup>2</sup>Max Planck Institute for Intelligent Systems, Tübingen,
-&#9827; Equal contribution<br>
-*In Proceedings of the International Conference on 3D Vision (3DV), 2022, Prague, Czechia.*<br>
-
-<a class="github-button" href="https://github.com/eth-ait/tempclr" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" data-show-count="true" aria-label="Star eth-ait/tempclr on GitHub">Code</a>
-<br>
-<a target="_blank" text-align='center' href='http://arxiv.org/abs/2209.00489'><img src="./assets/arxiv.svg" height="22px"></a>
-
-## Goal
-
-![Reconstructing 3D hand from a single RGB image](./assets/task.png width=80%)
-
-## Key Insight
-
-- Large amount of unlabelled monocular RGB video data in the wild
-- Limited accurate 3D annotation (often in-the-lab and not diverse)
-- Use contrastive learning to enforce similar hand poses to have similar embeddings.
-
-![](./assets/tsne.png width=90%)
-
-## Video
-
-![](https://www.youtube.com/watch?v=VSsKx8SnFio)
-
-## In-the-wild results (no 3D supervision from this dataset)
-
-TempCLR:
-
-![](./assets/tempclr/itw1.gif width=30%)
-![](./assets/tempclr/itw2.gif width=30%)
-
-
-Without TempCLR:
-
-![](./assets/expose/itw1.gif width=30%)
-![](./assets/expose/itw2.gif width=30%)
-
-## In-the-lab results (no 3D supervision from this dataset)
-
-TempCLR:
-
-![](./assets/tempclr/hanco1.gif width=30%)
-![](./assets/tempclr/hanco2.gif width=30%)
-
-
-Without TempCLR:
-
-![](./assets/expose/hanco1.gif width=30%)
-![](./assets/expose/hanco2.gif width=30%)
-
-
-
-## Abstract
-
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+  </div>
+</section>
+        
+        
+        <section class="section">
+            <div class="container is-max-desktop">
+                <!-- Abstract. -->
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
 We introduce TempCLR, a new time-coherent contrastive learning approach for the structured regression task of 3D hand reconstruction. Unlike previous time-contrastive methods for hand pose estimation, our framework considers temporal consistency in its augmentation scheme, and accounts for the differences of hand poses along the temporal direction. Our data-driven method leverages unlabelled videos and a standard CNN, without relying on synthetic data, pseudo-labels, or specialized architectures. Our approach improves the performance of fully-supervised hand reconstruction methods by 15.9% and 7.6% in PA-V2V on the HO-3D and FreiHAND datasets respectively, thus establishing new state-of-the-art performance. Finally, we demonstrate that our approach produces smoother hand reconstructions through time, and is more robust to heavy occlusions compared to the previous state-of-the-art which we show quantitatively and qualitatively.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Abstract. -->
+                <!-- Paper video. -->
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                    <h2 class="title is-3">Video</h2>
+                    <div class="publication-video">
+                      <iframe src="https://www.youtube.com/embed/VSsKx8SnFio?rel=0&amp;showinfo=0"
+                              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Paper video. -->
+            </div>
+        </section>
 
-
-## Citing Us
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~text
+        <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+                <h2 class="title">BibTeX</h2>
+                <pre><code>
 @inProceedings{ziani2022tempclr,
   title={TempCLR: Reconstructing Hands via Time-Coherent Contrastive Learning},
   author={Ziani, Andrea and Fan, Zicong and Kocabas, Muhammed and Christen, Sammy and Hilliges, Otmar},
   booktitle={International Conference on 3D Vision (3DV)},
   year={2022}
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-<style class="fallback">body{visibility:hidden}</style><script>markdeepOptions={tocStyle:'medium'};</script>
-<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?" charset="utf-8"></script>
-
-<script type="text/javascript">
-window.markdeepOptions.tocStyle='none'
-</script>
-
-<script type="text/javascript">
-// Reload page when loaded: github icon needs refreshed
-window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
-
-</script>
-
+                </code></pre>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link"
+                        href="">
+                    <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a class="icon-link" href="https://github.com/zc-alexfan" class="external-link" disabled>
+                    <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a rel="license"
+                                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                            </p>
+                            <p>
+                            This webpage is built with the template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
