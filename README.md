@@ -18,7 +18,7 @@
 </p>
 
 
-> Our training code is being prepared for public release. However, if you need the code urgently, we can provide a pre-release version if you email to `zicong.fan@inf.ethz.ch`.
+> For training code, contact [Zicong Fan*](https://zc-alexfan.github.io/).
 
 
 ## Updates
