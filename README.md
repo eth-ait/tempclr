@@ -149,15 +149,6 @@ create_image_summaries: True
 The images will be saved in the pre-trained model directory under a new directory named  `summary` .
 
 
-# Projects that might interest you
-
-**Learning to Disambiguate Strongly Interacting Hands via Probabilistic Per-Pixel Part Segmentation**
-> Zicong Fan, Adrian Spurr, Muhammed Kocabas, Siyu Tang, Michael J. Black, Otmar Hilliges. 3DV2021. [[Project](https://zc-alexfan.github.io/digit)] 
-
-<p align="center">
-    <img src="assets/digit.gif" alt="Image" height="200" />
-</p>
-
 # Acknowledgements
 [Muhammed Kocabas](https://ps.is.mpg.de/employees/mkocabas) is supported by the Max Planck ETH Center for Learning Systems. 
 The authors would like to thank [Vassilis Choutas](https://ps.is.mpg.de/person/vchoutas) for providing the code of the baseline model ([ExPose](https://expose.is.tue.mpg.de/)) adopted for the project.
