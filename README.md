@@ -18,7 +18,7 @@
 </p>
 
 
-> For training code, contact [Zicong Fan*](https://zc-alexfan.github.io/).
+> You can find our training code [here](https://drive.google.com/file/d/1weVxFljs4LKIexN9lVkLmcNQFQfWVywn/view?usp=sharing).
 
 
 ## Updates
